@@ -1,8 +1,8 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Our Services | Kartik Computers',
-  description: 'Expert computer, laptop, networking, and CCTV services in Agra. Quick and reliable tech support.'
+  title: 'Best CCTV Shop & Laptop Repair in Agra | Kartik Services',
+  description: 'Pro installation for CCTV surveillance, laptop maintenance, and data recovery. Best CCTV shop in Agra for security solutions.'
 };
 
 export default function ServicesLayout({ children }: { children: React.ReactNode }) {

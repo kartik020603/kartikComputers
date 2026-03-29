@@ -18,7 +18,7 @@ export default function Home() {
           </div>
         </div>
         <div className={styles.heroOverlay}>
-          <h1 className="animate-fade-up">Welcome to <span style={{color: 'var(--primary-red)'}}>Kartik</span> Computers</h1>
+          <h1 className="animate-fade-up">Best <span style={{color: 'var(--primary-red)'}}>Computer & Laptop</span> Shop in Agra</h1>
           <p className="animate-fade-up" style={{ animationDelay: '0.2s' }}>
             Your Trusted Technology Partner in Agra, Mathura, and Firozabad.
           </p>
@@ -31,7 +31,7 @@ export default function Home() {
 
       {/* Services Section */}
       <section className={`container ${styles.servicesSection}`}>
-        <h2 className="section-title">Our <span>Services</span></h2>
+        <h2 className="section-title">Best <span>CCTV & Laptop Services</span></h2>
         <div className={styles.servicesGrid}>
           {['CCTV Installation', 'Window Installation', 'Laptop/Desktop Repair', 'New Laptops', 'Old Laptops', 'Gaming Assembled Systems'].map((service, index) => (
             <div key={index} className={styles.serviceCard}>
