@@ -1,6 +1,6 @@
 import { MetadataRoute } from 'next';
 
-const BASE_URL = 'https://kartikcomputers.online';
+const BASE_URL = 'https://www.kartikcomputers.online';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const routes = [

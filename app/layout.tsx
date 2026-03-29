@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Kartik Computers | Agra',
     description: 'Premier Technology Store and Service Center in Agra.',
-    url: 'https://kartikcomputers.online',
+    url: 'https://www.kartikcomputers.online',
     siteName: 'Kartik Computers',
     locale: 'en_IN',
     type: 'website',

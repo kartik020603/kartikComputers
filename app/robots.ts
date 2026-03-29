@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: '/admin/',
     },
-    sitemap: 'https://kartikcomputers.online/sitemap.xml',
+    sitemap: 'https://www.kartikcomputers.online/sitemap.xml',
   };
 }
