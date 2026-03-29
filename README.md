@@ -36,5 +36,6 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 ### Required Environment Variables:
 Add the following in your **Vercel Project Settings**:
 - `DATABASE_URL`: `postgres://41e1341ce50e663716aaf0d635a74a17e6e3075333f15f8bdb1d698acf1473e9:sk_x1kXGL_9oP4giSVZXcgTl@db.prisma.io:5432/postgres?sslmode=require`
+- `BLOB_READ_WRITE_TOKEN`: Required for product image uploads. You can get this by enabling **Vercel Blob** in your Vercel Dashboard → Storage tab.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
