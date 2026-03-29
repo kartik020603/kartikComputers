@@ -190,6 +190,10 @@
 
 @media (max-width: 768px) {
   .heroOverlay h1 { font-size: 2.5rem; }
-  .heroOverlay p { font-size: 1.2rem; }
-  .heroButtons { flex-direction: column; }
+  .heroOverlay p { font-size: 1.1rem; }
+  .heroButtons { flex-direction: column; width: 100%; max-width: 300px; gap: 15px; }
+  .heroButtons a { text-align: center; } /* Assuming btn is used as links */
+  .servicesSection { padding: 60px 20px; }
+  .reviewsSection { padding: 60px 20px; }
+  .trustSection { padding: 60px 20px; }
 }

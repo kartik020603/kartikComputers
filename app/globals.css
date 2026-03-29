@@ -102,3 +102,10 @@ button {
 .section-title span {
   color: var(--primary-red);
 }
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+}

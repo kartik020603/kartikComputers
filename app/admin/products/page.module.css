@@ -165,3 +165,20 @@
   padding-top: 20px;
   border-top: 1px solid #e2e8f0;
 }
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+  .tableWrapper {
+    overflow-x: auto;
+  }
+  .row {
+    grid-template-columns: 1fr;
+  }
+  .modalContent {
+    padding: 20px;
+  }
+}
