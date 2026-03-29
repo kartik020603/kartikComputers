@@ -1,0 +1,31 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model Product {
+  id          String   @id @default(uuid())
+  name        String
+  description String
+  price       Float
+  stock       Int
+  category    String   // desktop, new laptop, refurbished laptop, cctv
+  images      String   // SQLite doesn't support JSON type natively, store stringified JSON
+  specs       String   // Stringified JSON or bullet points
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Enquiry {
+  id          String   @id @default(uuid())
+  name        String
+  mobile      String
+  description String
+  address     String
+  status      String   @default("NEW")
+  createdAt   DateTime @default(now())
+}

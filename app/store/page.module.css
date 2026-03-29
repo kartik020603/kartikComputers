@@ -1,0 +1,144 @@
+.storeLayout {
+  padding-top: 100px;
+  min-height: 90vh;
+}
+
+.filters {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 40px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.searchInput, .categorySelect {
+  padding: 12px 20px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  min-width: 250px;
+  background: white;
+  transition: border-color 0.2s;
+  outline: none;
+}
+.searchInput:focus, .categorySelect:focus {
+  border-color: var(--primary-blue);
+}
+
+.productGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+  padding-bottom: 50px;
+}
+
+.productCard {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.productCard:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-md);
+}
+
+.productImage {
+  width: 100%;
+  height: 220px;
+  background: #f0f2f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.productImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 10px;
+  transition: transform 0.3s ease;
+}
+
+.productCard:hover .productImage img {
+  transform: scale(1.05);
+}
+
+.productInfo {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.badge {
+  font-size: 0.75rem;
+  background: rgba(13, 71, 161, 0.1);
+  color: var(--primary-blue);
+  padding: 6px 12px;
+  border-radius: 20px;
+  align-self: flex-start;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.productInfo h3 {
+  font-size: 1.25rem;
+  color: var(--text-main);
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.shortDesc {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+.stockInfo {
+  margin-bottom: 15px;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.hurryText {
+  color: #d97706;
+  background: #fef3c7;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.stockText {
+  color: #059669;
+}
+
+.outOfStock {
+  color: var(--primary-red);
+}
+
+.price {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--primary-red);
+  margin-top: auto;
+}
+
+.loader, .noResults {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #666;
+  margin-top: 50px;
+  padding: 40px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: var(--shadow-sm);
+}

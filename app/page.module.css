@@ -1,0 +1,195 @@
+.homeContainer {
+  min-height: 100vh;
+}
+
+/* Hero Section */
+.heroSection {
+  position: relative;
+  height: 90vh;
+  min-height: 600px;
+  overflow: hidden;
+  background-color: var(--dark-blue);
+}
+
+.carousel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+@keyframes slideCarousel {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); } /* Slide half because duplicated content */
+}
+
+/* 6 items: 3 original + 3 duplicates, total width = 200% */
+.carouselTrack {
+  display: flex;
+  width: 200%;
+  height: 100%;
+  animation: slideCarousel 20s linear infinite;
+}
+
+.carouselItem {
+  position: relative;
+  width: 33.333%; /* relative to 200% = a 6th each */
+  height: 100%;
+  flex-shrink: 0;
+}
+
+.heroOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom, rgba(13, 71, 161, 0.4), rgba(0, 0, 0, 0.6));
+  color: white;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.heroOverlay h1 {
+  font-size: 4rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  text-shadow: 0 4px 6px rgba(0,0,0,0.5);
+}
+
+.heroOverlay p {
+  font-size: 1.5rem;
+  max-width: 800px;
+  margin-bottom: 40px;
+  line-height: 1.5;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.heroButtons {
+  display: flex;
+  gap: 20px;
+}
+
+/* Services */
+.servicesSection {
+  padding: 100px 20px;
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.serviceCard {
+  background: white;
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+  transition: all 0.3s ease;
+  border-bottom: 4px solid transparent;
+}
+
+.serviceCard:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+  border-bottom: 4px solid var(--primary-red);
+}
+
+.serviceIcon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.serviceCard h3 {
+  font-size: 1.4rem;
+  color: var(--primary-blue);
+  margin-bottom: 15px;
+}
+
+.serviceCard p {
+  color: #666;
+}
+
+/* Reviews */
+.reviewsSection {
+  padding: 100px 0;
+  background-color: var(--primary-blue);
+  background-image: linear-gradient(135deg, var(--dark-blue) 0%, var(--primary-blue) 100%);
+  color: white;
+}
+
+.reviewsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.reviewCard {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 30px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.2);
+  transition: transform 0.3s ease;
+}
+
+.reviewCard:hover {
+  transform: scale(1.02);
+}
+
+.stars {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+.reviewCard p {
+  font-size: 1.1rem;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.reviewCard h4 {
+  font-weight: 600;
+  color: #ffd700;
+}
+
+/* Trust Section */
+.trustSection {
+  padding: 100px 20px;
+}
+
+.trustGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+}
+
+.trustItem {
+  text-align: center;
+  padding: 30px;
+}
+
+.trustItem h3 {
+  font-size: 1.5rem;
+  color: var(--primary-red);
+  margin-bottom: 15px;
+}
+
+.trustItem p {
+  color: #555;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  .heroOverlay h1 { font-size: 2.5rem; }
+  .heroOverlay p { font-size: 1.2rem; }
+  .heroButtons { flex-direction: column; }
+}

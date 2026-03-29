@@ -1,0 +1,207 @@
+.adminContainer {
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.header h1 {
+  font-size: 2rem;
+  color: var(--primary-blue);
+}
+
+.filterBox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  box-shadow: var(--shadow-sm);
+}
+
+.filterBox label {
+  font-weight: 600;
+  color: #555;
+}
+
+.filterBox select {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  outline: none;
+}
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 30px;
+}
+
+.empty {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #888;
+  grid-column: 1 / -1;
+  padding: 50px;
+  background: white;
+  border-radius: 12px;
+}
+
+.enqCard {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: var(--shadow-md);
+  border-top: 4px solid var(--primary-blue);
+  display: flex;
+  flex-direction: column;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.statusSelect {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 800;
+  border: 1px solid transparent;
+  outline: none;
+  cursor: pointer;
+  appearance: none;
+  text-transform: capitalize;
+}
+
+.notviewed {
+  background: #fee2e2;
+  color: #ef4444;
+  border-color: #fecaca;
+}
+
+.followup {
+  background: #fef3c7;
+  color: #d97706;
+  border-color: #fde68a;
+}
+
+.enquiryfulfiled {
+  background: #d1fae5;
+  color: #059669;
+  border-color: #a7f3d0;
+}
+
+.statusDefault {
+  background: #f1f5f9;
+  color: #64748b;
+}
+
+.actionsBox {
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid #eee;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.delBtn {
+  background: #fee2e2;
+  color: var(--primary-red);
+  padding: 8px 15px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.delBtn:hover {
+  opacity: 0.8;
+}
+
+.date {
+  font-size: 0.85rem;
+  color: #888;
+}
+
+.enqCard h3 {
+  font-size: 1.4rem;
+  color: var(--text-main);
+  margin-bottom: 15px;
+}
+
+.contactInfo {
+  background: #f8fafc;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.contactInfo p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.descBox {
+  flex-grow: 1;
+  border-top: 1px solid #eee;
+  padding-top: 15px;
+}
+
+.descBox strong {
+  display: block;
+  font-size: 0.9rem;
+  color: #64748b;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.descBox p {
+  color: #333;
+  line-height: 1.5;
+}
+
+/* Modal */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  backdrop-filter: blur(4px);
+}
+
+.modalContent {
+  background: white;
+  padding: 40px;
+  border-radius: 16px;
+  width: 100%;
+  box-shadow: var(--shadow-md);
+}
+
+.modalContent h2 {
+  margin-bottom: 15px;
+  color: var(--primary-blue);
+}
+
+.modalActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  margin-top: 25px;
+}

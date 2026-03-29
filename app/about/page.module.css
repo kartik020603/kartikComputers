@@ -1,0 +1,167 @@
+.aboutContainer {
+  width: 100%;
+}
+
+.heroSection {
+  background: var(--primary-blue);
+  color: white;
+  padding: 120px 20px 80px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.heroSection::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background: white;
+  clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 100%);
+}
+
+.heroSection h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  font-weight: 800;
+}
+
+.primaryRed {
+  color: var(--primary-red);
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  opacity: 0.9;
+  letter-spacing: 1px;
+}
+
+.contentSection {
+  padding: 60px 0 100px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.textContent h2 {
+  font-size: 2.5rem;
+  color: var(--text-main);
+  margin-bottom: 25px;
+  position: relative;
+  display: inline-block;
+}
+
+.textContent h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: var(--primary-red);
+  border-radius: 2px;
+}
+
+.textContent p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.textContent strong {
+  color: var(--primary-blue);
+  font-weight: 700;
+}
+
+.milestones {
+  display: flex;
+  gap: 30px;
+  margin: 40px 0;
+  padding: 30px;
+  background: #f8fafc;
+  border-radius: 12px;
+  border-left: 4px solid var(--primary-blue);
+}
+
+.milestone {
+  display: flex;
+  flex-direction: column;
+}
+
+.number {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--primary-red);
+  line-height: 1;
+  margin-bottom: 5px;
+}
+
+.label {
+  font-size: 0.9rem;
+  color: #64748b;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.ctaBtn {
+  margin-top: 10px;
+  padding: 15px 35px;
+  font-size: 1.1rem;
+}
+
+.imageContent {
+  position: relative;
+}
+
+.imagePlaceholder {
+  width: 100%;
+  height: 500px;
+  border-radius: 20px;
+  position: relative;
+  box-shadow: var(--shadow-md);
+  overflow: visible;
+}
+
+.storePhoto {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.trustedBadge {
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  background: var(--primary-red);
+  color: white;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: 800;
+  box-shadow: 0 10px 25px rgba(211, 47, 47, 0.4);
+  transform: rotate(-10deg);
+  border: 6px solid white;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .imagePlaceholder {
+    height: 350px;
+    margin-top: 40px;
+  }
+}

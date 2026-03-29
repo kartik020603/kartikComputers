@@ -1,0 +1,118 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 0;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  background-color: transparent;
+}
+
+.navbar.scrolled {
+  background-color: var(--light-bg);
+  box-shadow: var(--shadow-sm);
+  padding: 15px 0;
+}
+
+.navContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--primary-blue);
+  text-decoration: none;
+}
+
+.logoRed {
+  color: var(--primary-red);
+}
+
+.navLinks {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.navLinks a, .dropbtn {
+  color: var(--text-main);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.05rem;
+  transition: color 0.2s ease;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px 0;
+}
+
+.navLinks a:hover, .dropbtn:hover {
+  color: var(--primary-red);
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdownContent {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 220px;
+  box-shadow: var(--shadow-md);
+  z-index: 1;
+  border-radius: 8px;
+  overflow: hidden;
+  top: 100%;
+}
+
+.dropdownContent a {
+  color: var(--text-main);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-size: 0.95rem;
+}
+
+.dropdownContent a:hover {
+  background-color: rgba(211, 47, 47, 0.05); /* very light red */
+  color: var(--primary-red);
+}
+
+.dropdown:hover .dropdownContent {
+  display: block;
+  animation: fadeUp 0.3s ease-out;
+}
+
+/* Home Page Transparent State Overrides */
+.transparentHome .logo {
+  color: #ffffff;
+  text-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+.transparentHome .navLinks a,
+.transparentHome .dropbtn {
+  color: #ffffff;
+  text-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+.transparentHome .navLinks a:hover,
+.transparentHome .dropbtn:hover {
+  color: #fca5a5;
+}
+
+.transparentHome .dropdownContent {
+  background-color: transparent;
+  box-shadow: none;
+  backdrop-filter: blur(5px);
+}
+
+.transparentHome .dropdownContent a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fca5a5;
+}

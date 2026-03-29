@@ -1,0 +1,47 @@
+.floatingContainer {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 1000;
+}
+
+.floatBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 20px;
+  border-radius: 50px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+}
+
+.floatBtn:hover {
+  transform: scale(1.05);
+}
+
+.callBtn {
+  background-color: var(--primary-blue);
+}
+
+.whatsappBtn {
+  background-color: #25D366; /* Official WhatsApp green */
+}
+
+@keyframes bounceInfinite {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.bounceBtn {
+  animation: bounceInfinite 1.5s ease-in-out infinite;
+}

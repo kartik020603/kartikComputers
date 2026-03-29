@@ -1,0 +1,73 @@
+.testiLayout {
+  padding-top: 120px;
+  padding-bottom: 80px;
+  min-height: 80vh;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #555;
+  margin-top: -15px;
+  margin-bottom: 50px;
+}
+
+.reviewsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.reviewCard {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.reviewCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--primary-red);
+}
+
+.reviewCard:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.stars {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  letter-spacing: 2px;
+}
+
+.text {
+  font-size: 1.05rem;
+  color: #444;
+  line-height: 1.6;
+  font-style: italic;
+  margin-bottom: 25px;
+  flex-grow: 1;
+}
+
+.author h4 {
+  color: var(--primary-blue);
+  margin-bottom: 5px;
+}
+
+.author span {
+  font-size: 0.85rem;
+  color: #777;
+  text-transform: uppercase;
+  font-weight: bold;
+}
