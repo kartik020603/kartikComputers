@@ -14,8 +14,19 @@ export default function AdminProducts() {
   useEffect(() => { loadProducts(); }, []);
 
   const loadProducts = async () => {
-    const res = await fetch('/api/products');
-    setProducts(await res.json());
+    try {
+      const res = await fetch('/api/products');
+      const data = await res.json();
+      if (Array.isArray(data)) {
+        setProducts(data);
+      } else {
+        console.error('Failed to load products:', data);
+        setProducts([]);
+      }
+    } catch (err) {
+      console.error('Error fetching products:', err);
+      setProducts([]);
+    }
   };
 
   const handleEdit = (p: Product) => {

@@ -14,9 +14,19 @@ export default function AdminEnquiries() {
   useEffect(() => { loadEnquiries(); }, []);
 
   const loadEnquiries = async () => {
-    const res = await fetch('/api/enquiries');
-    const data = await res.json();
-    setEnquiries(data);
+    try {
+      const res = await fetch('/api/enquiries');
+      const data = await res.json();
+      if (Array.isArray(data)) {
+        setEnquiries(data);
+      } else {
+        console.error('Failed to load enquiries:', data);
+        setEnquiries([]);
+      }
+    } catch (err) {
+      console.error('Error fetching enquiries:', err);
+      setEnquiries([]);
+    }
   };
 
   const updateStatus = async (id: string, newStatus: string) => {

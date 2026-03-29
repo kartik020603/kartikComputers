@@ -25,7 +25,12 @@ export default function Store() {
     fetch('/api/products')
       .then(res => res.json())
       .then(data => {
-        setProducts(data);
+        if (Array.isArray(data)) {
+          setProducts(data);
+        } else {
+          console.error('Expected array but got:', data);
+          setProducts([]);
+        }
         setLoading(false);
       })
       .catch(err => {
