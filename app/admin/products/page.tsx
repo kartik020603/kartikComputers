@@ -66,9 +66,19 @@ export default function AdminProducts() {
     if (files && files.length > 0) {
       const uploadData = new FormData();
       for (let i = 0; i < files.length; i++) uploadData.append('files', files[i]);
-      const res = await fetch('/api/upload', { method: 'POST', body: uploadData });
-      const data = await res.json();
-      if (data.urls) imageUrls = data.urls;
+      try {
+        const res = await fetch('/api/upload', { method: 'POST', body: uploadData });
+        const data = await res.json();
+        if (data.urls) {
+          imageUrls = data.urls;
+        } else {
+          alert('Upload failed: ' + (data.error || 'Unknown error. Check Vercel Blob Token.'));
+          return;
+        }
+      } catch (err) {
+        alert('Upload Error! Make sure you set up the Vercel Blob correctly.');
+        return;
+      }
     }
 
     const payload = {
