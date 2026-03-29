@@ -3,7 +3,8 @@ import prisma from '@/lib/prisma';
 import Link from 'next/link';
 import styles from './product.module.css';
 import ProductGallery from './ProductGallery';
-import { Product } from '@prisma/client';
+
+type RelatedProduct = { id: string; name: string; price: number; images: string; category: string; };
 
 export default async function ProductDetail({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
@@ -74,7 +75,7 @@ export default async function ProductDetail({ params }: { params: Promise<{ id: 
         <div className={styles.relatedSection}>
            <h2 className="section-title">Related <span>Products</span></h2>
            <div className={styles.relatedGrid}>
-             {related.map((rel: Product) => {
+             {related.map((rel: RelatedProduct) => {
                 const relImages = JSON.parse(rel.images || '[]');
                 const relImg = relImages.length > 0 ? relImages[0] : '/placeholder.png';
                 return (
